@@ -1,0 +1,32 @@
+{
+  "AlarmName": "test-error",
+  "AlarmDescription": "error occur",
+  "AWSAccountId": "123456789",
+  "NewStateValue": "ALARM",
+  "NewStateReason": "Threshold Crossed:  1 datapoint [2.0 (01/01/18 01:19:10)] was greater than or equal to the threshold",
+  "StateChangeTime": "2018-01-01T01:10:10.900+0000",
+  "Region": "Asia Pacific (Tokyo)",
+  "OldStateValue": "OK",
+  "Trigger": {
+    "MetricName": "UnHealthyHostCount",
+    "Namespace": "LogMetrics",
+    "StatisticType": "Statistic",
+    "Statistic": "SUM",
+    "Unit": null,
+    "Dimensions": [{
+        "name": "LoadBalancer",
+        "value": "test1"
+      },
+      {
+        "name": "TargetGroup",
+        "value": "test2"
+      }
+    ],
+    "Period": 60,
+    "EvaluationPeriods": 1,
+    "ComparisonOperator": "GreaterThanOrEqualToThreshold",
+    "Threshold": 5,
+    "TreatMissingData": "",
+    "EvaluateLowSampleCountPercentile": ""
+  }
+}
